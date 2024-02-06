@@ -37,19 +37,19 @@
         </q-item>
       </q-list>
       <div class="row q-col-gutter-sm">
-        <div class="col-4">
+        <div class="col-sm-4 col-md-2">
           <q-btn id="btn-prev-day" outline square class="col-4 full-width bgs-nav" color="primary" @click="changeDay(-1)">
             <div class="q-pt-xs">
               <q-icon class="fix-icon-align" name="mdi-skip-previous" size="xs"></q-icon>{{ prevDay }}
             </div>
           </q-btn>
         </div>
-        <div class="col-4">
+        <div class="col-sm-4 col-md-2">
           <q-btn id="btn-this-day" outline square class="col-4 full-width bgs-nav" color="primary" @click="loadToday()">
             <div class="q-pt-xs">Today</div>
           </q-btn>
         </div>
-        <div class="col-4">
+        <div class="col-sm-4 col-md-2">
           <q-btn id="btn-next-day" outline square class="col-4 full-width bgs-nav" color="primary" @click="changeDay(1)">
             <div class="q-pt-xs">
               {{ nextDay }}<q-icon class="fix-icon-align" name="mdi-skip-next" size="xs"></q-icon>
