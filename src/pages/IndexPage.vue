@@ -26,8 +26,9 @@
             >{{ tr }}</a></q-item-label>
           </q-item-section>
         </q-item>
-        <q-item v-for="ib in ['intro', 'tbp', 'ex1', 'ex2', 'tmm', 'morg']" :key="ib">
-          <q-item-section>
+        <template v-for="ib in ['intro', 'tbp', 'ex1', 'ex2', 'tmm', 'morg']" :key="ib">
+        <q-item v-if="dayInfo[ib]">
+          <q-item-section >
             <q-item-label overline class="item-heading">{{ itemBits[ib] }}</q-item-label>
             <q-item-label>
               <span v-if="dayInfo[ib]" v-html="dayInfo[ib]"></span>
@@ -35,6 +36,7 @@
             </q-item-label>
           </q-item-section>
         </q-item>
+        </template>
       </q-list>
       <div class="row q-col-gutter-sm">
         <div class="col-sm-4 col-md-2">
