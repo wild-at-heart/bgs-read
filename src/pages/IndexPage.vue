@@ -10,8 +10,8 @@
       <q-list v-else>
         <q-item>
           <q-item-section>
-            <q-item-label overline>Date</q-item-label>
-            <q-item-label>{{ dayInfo.day }}, {{ thisYear }}</q-item-label>
+
+            <q-item-label class="text-h4 text-grey-7">{{ dayInfo.day }}, {{ thisYear }}</q-item-label>
           </q-item-section>
         </q-item>
         <q-item v-for="rb in ['psalm', 'ntr']" :key="`rb-${rb}`">
@@ -23,6 +23,7 @@
               :href="bgLink(dayInfo[rb], tr)"
               class="external-link q-pr-sm"
               rel="noopener noreferrer"
+              target="_blank"
             >{{ tr }}</a></q-item-label>
           </q-item-section>
         </q-item>
@@ -38,7 +39,7 @@
         </q-item>
         </template>
       </q-list>
-      <div class="row q-col-gutter-sm">
+      <div class="row q-col-gutter-sm q-mt-md q-pa-md">
         <div class="col-sm-4 col-md-2">
           <q-btn id="btn-prev-day" outline square class="col-4 full-width bgs-nav" color="primary" @click="changeDay(-1)">
             <div class="q-pt-xs">
@@ -60,6 +61,8 @@
         </div>
       </div>
     </div>
+    <div class="q-pa-md">
+
     <div class="item-heading q-pt-md">Links</div>
     <div class="q-pt-sm">
       <a class="external-link" href="slack://channel?team=TQC64RB70&id=C069MRSEK2T">Slack: BGS Alumni / 2024-bgs-new-testament-leaders</a>
@@ -72,6 +75,7 @@
     </div>
     <div class="q-pt-sm">
       <a class="external-link" :href="spreadsheetLocns[thisYear]">Source sheet</a>
+    </div>
     </div>
   </q-page>
 </template>
